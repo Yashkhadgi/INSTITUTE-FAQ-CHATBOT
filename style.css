@@ -1,22 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f4f4f4;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #0b2c4d, #e60808);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .chat-container {
-    width: 400px;
-    margin: 50px auto;
-    background: white;
-    padding: 15px;
-    border-radius: 8px;
+    width: 420px;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Start screen */
+#start-screen button {
+    padding: 15px 25px;
+    font-size: 18px;
+    background: #f5c542;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+#start-screen button:hover {
+    background: #e0b838;
+}
+
+/* Chat screen */
+#chat-screen {
+    width: 100%;
+}
+
+#chat-screen h2 {
+    text-align: center;
+    color: #0b2c4d;
+    text-shadow: 1px 1px 2px #f5c542;
 }
 
 #chat-box {
-    height: 300px;
-    border: 1px solid #ccc;
+    height: 350px;
+    border: 2px solid #0b2c4d;
     padding: 10px;
     overflow-y: auto;
-    margin-bottom: 10px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#chat-box p {
+    padding: 8px 12px;
+    margin: 5px 0;
+    border-radius: 20px;
+    max-width: 80%;
+}
+
+.bot-msg {
+    background: #0b2c4d;
+    color: #fff;
+    align-self: flex-start;
+}
+
+.user-msg {
+    background: #f5c542;
+    color: #0b2c4d;
+    align-self: flex-end;
 }
 
 #input-area {
@@ -25,16 +81,23 @@ body {
 
 #user-input {
     flex: 1;
-    padding: 8px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #0b2c4d;
+    outline: none;
 }
 
 button {
-    padding: 8px;
-    margin-left: 5px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 20px;
+    background: #f5c542;
+    color: #0b2c4d;
+    font-weight: bold;
     cursor: pointer;
+    transition: 0.2s;
 }
 
-#start-btn {
-    width: 100%;
-    margin-top: 10px;
+button:hover {
+    background: #e0b838;
 }
